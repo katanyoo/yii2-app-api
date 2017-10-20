@@ -11,7 +11,11 @@ use yii\rest\ActiveController;
  */
 class CountryController extends ActiveController
 {
-    public $modelClass = 'app\modules\v1\models\Country';    
+	public $modelClass = 'app\modules\v1\models\Country';
+
+	public function actionExample() {
+		return 'Hello !!';
+	}
 }
 
 
