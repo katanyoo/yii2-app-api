@@ -11,8 +11,16 @@ use yii\rest\ActiveController;
  */
 class CountryController extends ActiveController
 {
+	/**
+	 * Model class
+	 * @var string คลาสที่เชื่อมต่อกับ Controller นี้
+	 */
 	public $modelClass = 'app\modules\v1\models\Country';
 
+	/**
+	 * Example action
+	 * @return string anytext
+	 */
 	public function actionExample() {
 		return 'Hello !!';
 	}

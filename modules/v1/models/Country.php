@@ -1,6 +1,7 @@
 <?php
 namespace app\modules\v1\models;
-use \yii\db\ActiveRecord;
+use yii\db\ActiveRecord;
+
 /**
  * Country Model
  *
@@ -9,15 +10,17 @@ use \yii\db\ActiveRecord;
 class Country extends ActiveRecord
 {
 	/**
-	 * @inheritdoc
-	 */
+     * Declares the name of the database table associated with this AR class.
+     * @return string The table name
+     */
 	public static function tableName()
 	{
 		return 'country';
 	}
 
     /**
-     * @inheritdoc
+     * Returns the primary key name(s) for this AR class.
+     * @return string[] The primary keys of the associated database table.
      */
     public static function primaryKey()
     {

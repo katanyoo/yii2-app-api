@@ -1,5 +1,7 @@
 <?php
 
+use yii\helpers\Html;
+
 /* @var $this yii\web\View */
 
 $this->title = Yii::$app->params['companyName'];
@@ -10,7 +12,7 @@ $this->title = Yii::$app->params['companyName'];
         <h1><?= Yii::$app->params['serviceName'] ?></h1>
     </div>
 
-    <div class="body-content">
-
+    <div class="body-content text-center">
+    	<?php echo 'วิธีการใช้งาน กรุณาอ่าน ', Html::a('คู่มือ '.Yii::$app->params['serviceName'], ['/apidoc']) ?>
     </div>
 </div>
