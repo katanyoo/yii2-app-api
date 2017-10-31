@@ -14,10 +14,11 @@ DIRECTORY STRUCTURE
       assets/             contains assets definition
       commands/           contains console commands (controllers)
       config/             contains application configurations
+      controllers/        contains Controller classes
       modules/            contains Module for api
         v1/               contains Controller classes and Model classes
           controllers/    contains Module controller classes
-          models/         contains model classes
+          models/         contains Model classes
       mail/               contains view files for e-mails
       runtime/            contains files generated during runtime
       tests/              contains various tests for the api application
@@ -44,7 +45,7 @@ at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
 You can then install this project template using the following command:
 
 ~~~
-php composer.phar create-project --prefer-dist --stability=dev katanyoo/yii2-app-api api
+php composer.phar create-project --prefer-dist katanyoo/yii2-app-api api
 ~~~
 
 Now you should be able to access the application through the following URL, assuming `api` is the directory
