@@ -11,7 +11,7 @@ class Country extends ActiveRecord
 {
 	/**
      * Declares the name of the database table associated with this AR class.
-     * @return string The table name
+     * @return  string The table name
      */
 	public static function tableName()
 	{

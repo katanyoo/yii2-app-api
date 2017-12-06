@@ -44,10 +44,20 @@ $config = [
                 ],
             ],
         ],
+        'httpclient' => [
+            'class' => 'understeam\httpclient\Client',
+            'detectMimeType' => true, // automatically transform request to data according to response Content-Type header
+            'requestOptions' => [
+            // see guzzle request options documentation
+            ],
+            'requestHeaders' => [
+            // specify global request headers (can be overrided with $options on making request)
+            ],
+        ],
         'db' => $db,
         'urlManager' => [
             'enablePrettyUrl' => true,
-            'showScriptName' => false,
+            'showScriptName' => true,
             'rules' => [
                 [
                     'class' => 'yii\rest\UrlRule', 
@@ -74,6 +84,11 @@ if (YII_ENV_DEV) {
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
+        'generators' => [ //here
+            'controller' => [ // generator name
+                'class' => 'app\generators\controller\Generator', // generator class
+            ]
+        ],
         // uncomment the following to add your IP if you are not connecting from localhost.
         //'allowedIPs' => ['127.0.0.1', '::1'],
     ];

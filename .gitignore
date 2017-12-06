@@ -15,6 +15,9 @@ Thumbs.db
 # composer vendor dir
 /vendor
 
+# custom gii generator
+/generators
+
 # composer itself is not needed
 composer.phar
 composer.lock

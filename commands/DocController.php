@@ -17,7 +17,7 @@ class DocController extends Controller
     /**
      * This command generate api and guide document.
      */
-    public function actionGenerate()
+    public function actionGen()
     {
     	echo "\033[0;35m", "Processing API document source files." . PHP_EOL;
         echo shell_exec('./vendor/bin/apidoc api --color=always --interactive=0 --pageTitle="' . Yii::$app->params['serviceName'] . '" ./modules ./web/docs/apidoc --guide=../guide-en --guide=../guide-en') . PHP_EOL;
