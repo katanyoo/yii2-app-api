@@ -22,7 +22,7 @@ class CountryController extends ActiveController
 	 * @return string anytext
 	 */
 	public function actionExample() {
-		return 'Hello !!';
+		return ['Hello !!'];
 	}
 }
 

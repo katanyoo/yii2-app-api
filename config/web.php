@@ -62,8 +62,8 @@ $config = [
                 [
                     'class' => 'yii\rest\UrlRule', 
                     'controller' => 'v1/country',
-                    'tokens' => [
-                        '{id}' => '<id:\\w+>'
+                    'extraPatterns' => [
+                        'GET example' => 'example'
                     ]
                 ]
             ],

@@ -24,7 +24,7 @@ class Country extends ActiveRecord
      */
     public static function primaryKey()
     {
-        return ['code'];
+        return ['id'];
     }
 
     /**
@@ -33,7 +33,7 @@ class Country extends ActiveRecord
     public function rules()
     {
         return [
-            [['code', 'name', 'population'], 'required']
+            [['id', 'name'], 'required']
         ];
     }
 }
