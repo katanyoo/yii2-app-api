@@ -15,9 +15,6 @@ return [
     'language' => 'en-US',
     'components' => [
         'db' => $db,
-        'mailer' => [
-            'useFileTransport' => true,
-        ],
         'assetManager' => [            
             'basePath' => __DIR__ . '/../web/assets',
         ],
@@ -35,7 +32,7 @@ return [
             ],
         ],
         'user' => [
-            'identityClass' => 'app\models\User',
+            'identityClass' => 'app\modules\v1\models\User',
         ],        
         'request' => [
             'cookieValidationKey' => 'test',

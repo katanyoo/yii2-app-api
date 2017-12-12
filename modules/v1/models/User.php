@@ -10,6 +10,10 @@ use common\components\CommonRuleHelper;
 class User extends ActiveRecord implements IdentityInterface
 {
 
+    /**
+     * behavior ต่างๆ ของตาราง
+     * @return Array behaviors
+     */
     public function behaviors()
     {
         return [
@@ -17,6 +21,10 @@ class User extends ActiveRecord implements IdentityInterface
         ];
     }
 
+    /**
+     * ชื่อตารางที่ผูกกับ Model นี้
+     * @return string ชื่อตาราง
+     */
     public static function tableName()
     {
         return 'user';
