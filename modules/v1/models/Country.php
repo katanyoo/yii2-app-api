@@ -33,7 +33,7 @@ class Country extends ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'name'], 'required']
+            [['name'], 'required']
         ];
     }
 }

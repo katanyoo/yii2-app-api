@@ -2,8 +2,10 @@ actor: ApiTester
 modules:
     enabled:
         - REST:
-            url: /v1
-            depends: Yii2
+            depends: PhpBrowser
+            url: http://localhost:8080/web/index-test.php
+            # depends: Yii2
+            # url: /web/index-test.php
         - \Helper\Api
     config:
         - Yii2

@@ -25,5 +25,3 @@ class CountryController extends ActiveController
 		return ['Hello !!'];
 	}
 }
-
-

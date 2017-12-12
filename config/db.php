@@ -2,9 +2,9 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=booking',
+    'dsn' => 'mysql:host=localhost;dbname=yii2db',
     'username' => 'root',
-    'password' => 'KanaTab01',
+    'password' => '',
     'charset' => 'utf8',
 
     // Schema cache options (for production environment)
