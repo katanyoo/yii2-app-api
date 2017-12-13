@@ -2,6 +2,7 @@
 
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
+$url = require __DIR__ . '/url.php';
 $modules = require __DIR__ . '/modules.php';
 
 $config = [
@@ -48,19 +49,7 @@ $config = [
             ],
         ],
         'db' => $db,
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => true,
-            'rules' => [
-                [
-                    'class' => 'yii\rest\UrlRule', 
-                    'controller' => 'v1/country',
-                    'extraPatterns' => [
-                        'GET example' => 'example'
-                    ]
-                ]
-            ],
-        ],
+        'urlManager' => $url,
     ],
     'params' => $params,
 ];
