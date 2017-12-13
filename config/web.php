@@ -4,6 +4,7 @@ $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 $url = require __DIR__ . '/url.php';
 $modules = require __DIR__ . '/modules.php';
+$httpclient = require __DIR__ . '/httpclient.php';
 
 $config = [
     'id' => 'basic',
@@ -38,16 +39,7 @@ $config = [
                 ],
             ],
         ],
-        'httpclient' => [
-            'class' => 'understeam\httpclient\Client',
-            'detectMimeType' => true, // automatically transform request to data according to response Content-Type header
-            'requestOptions' => [
-            // see guzzle request options documentation
-            ],
-            'requestHeaders' => [
-            // specify global request headers (can be overrided with $options on making request)
-            ],
-        ],
+        'httpclient' => $httpclient,
         'db' => $db,
         'urlManager' => $url,
     ],

@@ -3,6 +3,7 @@ $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/test_db.php';
 $url = require __DIR__ . '/url.php';
 $modules = require __DIR__ . '/modules.php';
+$httpclient = require __DIR__ . '/httpclient.php';
 
 /**
  * Application configuration shared by all test types
@@ -31,9 +32,10 @@ return [
                 'domain' => 'localhost',
             ],
             */
-        ],  
+        ],
+        'httpclient' => $httpclient,
         'db' => $db,
-        'urlManager' => $url,      
+        'urlManager' => $url,
     ],
     'params' => $params,
 ];
