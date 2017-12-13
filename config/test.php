@@ -16,22 +16,8 @@ return [
     ],  
     'modules' => $modules,
     'components' => [
-        'db' => $db,
         'assetManager' => [            
             'basePath' => __DIR__ . '/../web/assets',
-        ],
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => true,
-            'rules' => [
-                [
-                    'class' => 'yii\rest\UrlRule', 
-                    'controller' => 'v1/country',
-                    'extraPatterns' => [
-                        'GET example' => 'example'
-                    ]
-                ]
-            ],
         ],
         'user' => [
             'identityClass' => 'app\modules\v1\models\User',
@@ -45,7 +31,9 @@ return [
                 'domain' => 'localhost',
             ],
             */
-        ],        
+        ],  
+        'db' => $db,
+        'urlManager' => $url,      
     ],
     'params' => $params,
 ];
