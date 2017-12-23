@@ -21,7 +21,7 @@ return [
             'basePath' => __DIR__ . '/../web/assets',
         ],
         'user' => [
-            'identityClass' => 'app\modules\v1\models\User',
+            'identityClass' => 'app\modules\v1\models\Client',
         ],        
         'request' => [
             'cookieValidationKey' => 'test',

@@ -1,5 +1,5 @@
 <?php
-use app\fixtures\UserFixture;
+use app\fixtures\ClientFixture;
 use app\fixtures\CountryFixture;
 
 class CountryCest
@@ -7,9 +7,9 @@ class CountryCest
     public function _before(ApiTester $I)
     {
         $I->haveFixtures([
-            'user' => [
-                'class' => UserFixture::className(),
-                'dataFile' => codecept_data_dir() . 'user.php'
+            'client' => [
+                'class' => ClientFixture::className(),
+                'dataFile' => codecept_data_dir() . 'client.php'
             ],
             'country' => [
                 'class' => CountryFixture::className(),

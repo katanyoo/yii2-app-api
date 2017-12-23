@@ -7,7 +7,7 @@ use \yii\web\IdentityInterface;
 use yii\behaviors\TimestampBehavior;
 use common\components\CommonRuleHelper;
 
-class User extends ActiveRecord implements IdentityInterface
+class Client extends ActiveRecord implements IdentityInterface
 {
 
     /**
@@ -27,7 +27,7 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public static function tableName()
     {
-        return 'user';
+        return 'client';
     }
 
     /**

@@ -12,7 +12,7 @@ class m130524_201442_init extends Migration
             $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB';
         }
 
-        $this->createTable('{{%user}}', [
+        $this->createTable('client', [
             'id' => $this->primaryKey(),
             'username' => $this->string()->notNull()->unique(),
             'auth_key' => $this->string(32)->notNull(),
@@ -23,10 +23,20 @@ class m130524_201442_init extends Migration
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),
         ], $tableOptions);
+
+        $this->createTable('keychain', [
+            'id' => $this->primaryKey(),
+            'service_name' => $this->string()->notNull(),
+            'service_endpoint' => $this->string()->notNull(),
+            'access_token' => $this->string()->notNull(),
+            'created_at' => $this->integer()->notNull(),
+            'updated_at' => $this->integer()->notNull(),
+        ], $tableOptions);
     }
 
     public function down()
     {
-        $this->dropTable('{{%user}}');
+        $this->dropTable('client');
+        $this->dropTable('keychain');
     }
 }

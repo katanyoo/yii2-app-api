@@ -204,3 +204,16 @@ Types you can pass as a body of request:
 Any other data passed as body will be sent into Guzzle without any transformations.
 
 Read more about request body in [Guzzle documentation](http://guzzle.readthedocs.org/en/latest/request-options.html#body)
+
+API Document Generating
+-----------------------
+
+~~~
+./yii doc/gen
+~~~
+
+For Windows user
+
+~~~
+yii doc/win-gen
+~~~
