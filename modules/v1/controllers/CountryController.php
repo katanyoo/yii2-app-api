@@ -6,6 +6,7 @@ use yii\rest\ActiveController;
 use yii\filters\auth\CompositeAuth;
 use yii\filters\auth\HttpBasicAuth;
 use yii\filters\auth\HttpBearerAuth;
+use app\modules\v1\models\Country;
 
 /**
  * Country Controller API
@@ -39,10 +40,43 @@ class CountryController extends ActiveController
 	}
 
 	/**
+	 * Example
+     * @SWG\Get(path="/countries/example",
+     *     tags={"Country"},
+     *     summary="Retrieves 'hello' message.",
+     *     @SWG\Response(
+     *         response = 200,
+     *         description = "Hello message",
+     *     ),
+     * )
+     */
+    
+	/**
 	 * Example action
 	 * @return string anytext
 	 */
 	public function actionExample() {
-		return ['Hello !!'];
+		return ['message' => 'Hello !!'];
 	}
+
+	/**
+	 * Example
+     * @SWG\Get(path="/countries",
+     *     tags={"Country"},
+     *     summary="Retrieves the collection of User resources.",
+     *     @SWG\Response(
+     *         response = 200,
+     *         description = "Countries collection response",
+     *         @SWG\Schema(ref = "#/definitions/Country")
+     *     ),
+     * )
+     */
+    public function actionIndex()
+    {
+        $dataProvider = new ActiveDataProvider([
+            'query' => Country::find(),
+        ]);
+
+        return $dataProvider;
+    }
 }
