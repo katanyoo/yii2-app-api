@@ -33,7 +33,7 @@ class CountryController extends ActiveController
 				HttpBasicAuth::className(),
 				HttpBearerAuth::className(),
 			],
-			'except' => ['example']
+			'except' => ['example', 'index']
 		];
 		return $behaviors;
 	}

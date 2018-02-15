@@ -39,9 +39,6 @@ $config = [
                 ],
             ],
         ],
-        'response' => [
-            'format' => \yii\web\Response::FORMAT_JSON
-        ],
         'httpclient' => $httpclient,
         'db' => $db,
         'urlManager' => $url,

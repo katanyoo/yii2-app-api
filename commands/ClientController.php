@@ -4,16 +4,16 @@ namespace app\commands;
 
 use Yii;
 use yii\console\Controller;
-use app\modules\v1\models\User;
+use app\modules\v1\models\Client;
 
 /**
  * This command echoes the first argument that you have entered.
  *
- * This command is provided as an example for you to learn how to create console commands.
+ * This command `./yii client/signup --username=<username> --password=<password>` is provided as a new client authorization data.
  *
  * @author Katanyoo Ubalee <ubalee.k@gmai.com>
  */
-class UserController extends Controller
+class ClientController extends Controller
 {
     public $username;
     public $password;
