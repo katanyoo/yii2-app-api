@@ -13,6 +13,6 @@ $this->title = Yii::$app->params['companyName'];
     </div>
 
     <div class="body-content text-center">
-    	<?php echo 'วิธีการใช้งาน กรุณาอ่าน ', Html::a('คู่มือ '.Yii::$app->params['serviceName'], '@web/docs/apidoc/') ?>
+    	<?php echo 'วิธีการใช้งาน กรุณาอ่าน', Html::a('คู่มือ '.Yii::$app->params['serviceName'], '@web/docs/apidoc/') ?>
     </div>
 </div>

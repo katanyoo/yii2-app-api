@@ -2,6 +2,6 @@
 
 return [
     'adminEmail' => 'admin@example.com',
-    'companyName' => 'Moahom Co., Ltd.',
+    'companyName' => 'Infiltech Co., Ltd.',
     'serviceName' => 'Service name',
 ];
