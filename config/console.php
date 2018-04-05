@@ -1,7 +1,13 @@
 <?php
 
-$params = require __DIR__ . '/params.php';
-$db = require __DIR__ . '/db.php';
+$params = yii\helpers\ArrayHelper::merge(
+    require __DIR__ . '/params.php',
+    require __DIR__ . '/params-local.php'
+);
+$db = yii\helpers\ArrayHelper::merge(
+    require __DIR__ . '/db.php',
+    require __DIR__ . '/db-local.php'
+);
 
 $config = [
     'id' => 'basic-console',
@@ -24,12 +30,12 @@ $config = [
     ],
     'params' => $params,
     /*
-    'controllerMap' => [
-        'fixture' => [ // Fixture generation command line.
-            'class' => 'yii\faker\FixtureController',
-        ],
-    ],
-    */
+'controllerMap' => [
+'fixture' => [ // Fixture generation command line.
+'class' => 'yii\faker\FixtureController',
+],
+],
+ */
 ];
 
 if (YII_ENV_DEV) {
